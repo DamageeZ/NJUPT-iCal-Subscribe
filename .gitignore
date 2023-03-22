@@ -1,2 +1,3 @@
 config.conf
 developFolder
+__pycache__

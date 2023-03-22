@@ -114,7 +114,7 @@ DTSTAMP:{runtime}
 DTSTART;TZID=Asia/Shanghai:{startTime}
 LAST-MODIFIED:{runtime}
 SEQUENCE:0
-SUMMARY:{line["ClassName"] + "@" + line["Classroom"][-3:]}
+SUMMARY:{line["ClassName"] + "@" + line["Classroom"][idx][-3:]}
 TRANSP:OPAQUE
 UID:{uidGen(line["ClassID"], startTime)}
 {AppleLoc(line["Classroom"][idx])}
