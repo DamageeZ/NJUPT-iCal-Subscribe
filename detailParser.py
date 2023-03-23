@@ -83,7 +83,7 @@ uidGen = lambda cid, st: cid+"_"+st[:8]+"@DamageeZ.github.com"
 runtime = datetime.utcnow().strftime(r"%Y%m%dT%H%M%SZ")
 
 for line in newtb:
-    print(line)
+    # print(line)
     t = line["Time"].strip("\n").split(";")
     pat1 = r"周([\u4e00\u4e8c\u4e09\u56db\u4e94\u516d\u65e5]){1}第(\d{1,2})(,\d{1,2})?(,\d{1,2})?(,\d{1,2})?节"
     pat2 = r"第(\d{1,2})\-(\d{1,2})周"
