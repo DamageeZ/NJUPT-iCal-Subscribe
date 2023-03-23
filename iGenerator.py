@@ -50,7 +50,7 @@ UID:{uidGen(ci, st)}
 END:VEVENT
 """
 
-class iGenerator():
+class IcsGenerator():
     def __init__(self, SStartTime:tuple, txtUserName:str, classSTime:list[tuple], classDuration:int):
         self.weekcnt = [SStartTime]
         baseline = datetime(*SStartTime)
@@ -108,7 +108,7 @@ class iGenerator():
                 for wk in wt:
                     startTime = (datetime(*self.weekcnt[wk - 1]) + timedelta(days=wd - 1, hours = self.classSTime[cidx[0] - 1][0], minutes=self.classSTime[cidx[0] - 1][1])).strftime(r"%Y%m%dT%H%M%S")
                     endTime = (datetime(*self.weekcnt[wk - 1]) + timedelta(days=wd - 1, hours = self.classSTime[cidx[-1] - 1][0], minutes=self.classSTime[cidx[-1] - 1][1] + self.classDuration)).strftime(r"%Y%m%dT%H%M%S")
-                    self.icsStr += vevent(runtime, line["TeacherName"], endTime, startTime, line["ClassName"], line["Classroom"], line["CLassID"])
+                    self.icsStr += vevent(runtime, line["TeacherName"], endTime, startTime, line["ClassName"], line["Classroom"][idx], line["ClassID"])
         self.icsStr += "END:VCALENDAR"
         return self
 
