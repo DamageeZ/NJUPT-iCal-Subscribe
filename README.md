@@ -1,1 +1,3 @@
-# 如题，开发阶段没啥好说的
+```bash
+>> docker pull damageez/njupt-ical:main
+```
