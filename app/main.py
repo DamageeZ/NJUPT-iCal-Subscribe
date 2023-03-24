@@ -54,7 +54,7 @@ def icalSubscrib(xh:str, pswd:str, force:bool=False):
                 break
             else:
                 runinfo += " LocalRead "
-                f = open(xh+".ics", "r")
+                f = open(xh+".ics", "r", encoding='utf8')
                 output = f.read()
                 f.close()
                 break
